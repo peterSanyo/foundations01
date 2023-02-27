@@ -1,0 +1,103 @@
+html {
+    font-size: 20px; /* px means "pixels": the base font size is now 10 pixels high */
+    font-family: "Carrois Gothic"; /* this should be the rest of the output you got from Google Fonts */
+}
+
+html {
+    background-color: #09083E;
+    size: auto;}
+
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    padding: 0%;
+    margin: 0%;
+}
+.card1 {
+    width: 80%;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1% ;
+    height: 90%;
+    background-color: #09083E;
+    padding: 20px 20px 20px 20px;
+    border: 2px solid aliceblue;
+}
+h1 {
+    font-size: 350%;
+    text-align: center;
+    color: aliceblue;
+    margin: 0%;
+    margin-top: 1%;
+}
+.descr {
+    text-align: center;
+    font-size: 0.8em;
+    font-style: italic;
+}
+
+ul {
+    list-style: none;
+    padding: 0%;
+}  
+
+p,
+li,
+h2 {
+    font-size: 0.8em;
+    letter-spacing: 1px;
+    color: aliceblue;
+    text-align: center;
+}
+
+
+.link :link {
+  color: white;
+}
+
+.link :hover {
+  text-decoration: none;
+  color:aqua;
+} 
+
+
+@media screen and (min-width: 1300px) {
+    
+    .card1 {
+        align-self: left;
+        width: 800px;
+        height: 90%;
+        background-color: #09083E;
+        padding: 20px 20px 20px 20px;
+        border: 2px solid aliceblue;
+        align-self: center;
+        
+    }
+    .card2 {
+        min-width: 80% - 800px;
+        min-width: 400;
+        min-height: 260;
+        border: 1px solid aliceblue;
+        align-self: center;
+        
+    }    
+    
+    body {
+        
+        align-items: center;
+        align-self: center;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        column-gap: 30px;
+        padding-right: 5%;
+        padding-left: 5%;
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }
+
+    
+}
