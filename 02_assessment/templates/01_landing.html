@@ -10,7 +10,8 @@
 </head>
 
 <body>
-    <h1>Welcome, what is your name ?</h1>
+    <h1>Welcome to Glass Curtain Gallery</h1>
+    <h2>What is your Name?</h2>
     <form method="WRITE">
         <input type="text" id="tt" placeholder="Enter Name : ">
         <input type="checkbox" checked>
@@ -19,9 +20,20 @@
       <p id="demo"></p>
       </div>
 
+      <div class="menu">
+        <h3>Currently Showing</h3> 
+        {% for slug, piece in pieces.items() %}
+            <p>{{piece["name"]}} by {{piece["offerer"]}}</p> 
+        {% endfor %} 
+      </div>
+      <a href="/downloads">Download Exhibition details</a>
+    
+
 
 </body>
 
+
+    
 
 
 </html>
