@@ -1,0 +1,216 @@
+/* General styles - put these straight into your stylesheet */
+
+
+  
+html {
+    font-family: 'Helvetica neue', Arial, 'sans serif';
+    font-size: 17px;
+    align-items: center;
+    font-weight: lighter;
+    font-stretch:ultra-expanded;
+    color: rgba(255, 255, 255, 0.801);
+  }
+  
+  /* Colourful waves */
+  body {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    height: 35%;
+  }  
+  @keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    } 
+      50% {
+        background-position: 100% 50%;
+    } 
+      100% {
+        background-position: 0% 50%;
+    }
+  }
+  
+  
+  h1, h2 {
+    text-align: center;
+      font-size: 2em;
+      line-height: 1em;
+  }
+  
+  footer p {
+      font-size: 1.5em;
+      align-self: auto;
+      line-height:0%;
+  }
+    
+  
+  /*  header */
+  .card header {
+      background-image: linear-gradient(to bottom,rgba(0,0,0,0.1), rgba(0,0,0,0));
+      border-radius: 1.5em 1.5em 0 0;
+  }
+  
+  .card article {
+      height: 30em;
+  }
+  
+   /* card container */
+  .card {
+      width: 80%;
+      min-height: 80%;
+      margin: 7em auto;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.145);
+      border-radius: 16px;
+      background-color: rgba(255, 255, 255, .15);
+      backdrop-filter: blur(100px);
+  }
+
+  .card article .box {
+    text-align: center;
+    margin: 1em 1em;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    min-height: 40%;
+    opacity: 0.9;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.145);
+  }
+
+  .card article p {
+    padding-top: 1.5em;
+    margin-left: 10%;
+    margin-top: 0em;
+  }
+    
+
+  /* footer */
+  .card footer {
+      background-image: linear-gradient(to bottom,rgba(0,0,0,0), rgba(0,0,0,0.1));
+      border-radius: 16px;
+  }
+  
+  a {
+    color: rgba(255, 255, 255, 0.801);
+  }
+  
+  a:hover{
+    color: rgba(255, 255, 255, 1);
+  }
+    
+  .card header, footer {
+      height: 3em;
+      padding: 1em;
+      border-radius: 16px;
+  }
+  
+  /* Mobile (up to 700 px) */
+    
+  @media only screen and (max-width: 700px) {
+  html {
+      font-family: 'Helvetica neue', Arial, 'sans serif';
+      font-size: 17px;
+      align-items: center;
+      font-weight: lighter;
+      font-stretch:ultra-expanded;
+      color: rgba(255, 255, 255, 0.801);
+  }
+  
+  h1, h2 {
+    line-height: 0%;
+    text-align: center;
+    padding-bottom: 0%;
+  }
+  .card article {
+    height: 12em;
+    padding-left: 0em;
+    padding-top: 0%;
+}
+  
+  .card {
+      width: 50%;
+      min-width: 300px;
+      max-width: 1200px;
+      height: 600px;
+      margin: 1em auto;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.145);
+      border-radius: 16px;
+      background-color: rgba(255, 255, 255, .15);
+      backdrop-filter: blur(100px);
+  }
+  
+  .card article .box {
+    text-align: center;
+    margin: 1em 1em;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    min-height: 100%;
+    opacity: 0.9;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.145);
+    
+  }
+  
+
+  .card article p {
+    padding-top: 1.5em;
+    margin-left: 10%;
+    margin-top: 0em;
+  }
+  
+  footer p {
+    font-size: 1.5em;
+    text-align: center;
+    line-height:normal;
+  }
+  
+  .card footer {
+    margin-top: 10.4em;
+    background-image: linear-gradient(to bottom,rgba(0,0,0,0), rgba(0,0,0,0.1));
+    border-radius: 16px;
+  }
+  }
+  
+   /* Screens up from 1200 px  */
+  @media only screen and (min-width: 1200px) {
+  
+    .card {
+      width: 90%;
+      height: 200%;
+      margin: 7em auto;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.145);
+      border-radius: 16px;
+      background-color: rgba(255, 255, 255, .15);
+      backdrop-filter: blur(100px);
+  }
+  .card article .box {
+    float: right;
+    text-align: center;
+    margin: 1em 1em;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    min-height: 70%;
+    min-width:70%;
+    opacity: 0.9;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.145);
+    
+  }
+  
+  footer p {
+    text-align: right;
+    font-size: 1.5em;
+    line-height:0%;
+  }
+
+  .card article p {
+    float: left;
+    min-width: 20%;
+    padding-top: 10%;
+    margin-left: 5%;
+    margin-top: 0em;
+  }
+  
+  }

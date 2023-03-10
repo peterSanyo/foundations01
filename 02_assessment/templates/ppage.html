@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Business Card - Péter Sanyó</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/ppage.css') }}">    <title>Just Landing</title>
+
+  </head>
+  <body>
+    <div class="d-flex flex-column justify-content-center w-100 h-100"></div>
+    <h1>Welcome, Paul</h1>
+    <section class="card">
+      <header>
+        <h2>{{name}}</h2>
+      </header>
+      <article>
+        <p class="box">{{image}}</p>
+        <p>{{quote}}<br>
+          - {{quoted}}<br>
+        <strong>Offered by</strong>: {{offerer}}<br>
+        <strong>Dimensions</strong>: {{dimensions}}<br>
+        <strong>Materials</strong>: {{materials}}<br>
+        <strong>Category</strong>: {{category}}<br>
+        <strong>Price</strong>: {{price}}</p>
+      </article>
+    </section>
+
+  </body>
+</html>
