@@ -14,18 +14,48 @@ pieces = {
     "category":"Spatial home Audio",
     "price": " 399$"
     },
+    "phantom_syntopia" : {
+    "name": "Phantom Syntopia",
+    "image": "IMAGE OF ELEGANT LUXURY-CAR",
+    "quote": ' "a state-of-the-art experience [...] by the forces of nature." ',
+    "quoted":"Iris van Herpen",
+    "offerer":"Rolls Royce X iris van Herpen",
+    "dimensions": "571x214x157 cm",
+    "materials": "Leather, Fabric, Steel",
+    "category":"Vehicle",
+    "price": "-"
+    },
+    "white_fromme" : {
+    "name": "White Fromme Collection",
+    "image": "IMAGE OF MINIMALISTIC SET OF INTERIOUR DESIGN CLASSIS",
+    "quote": ' "This design was inspired by the personal story of Tom Chung." ',
+    "quoted":"Petite Friture, French Design Brand",
+    "offerer":"Petite Friture X Tom Chang",
+    "dimensions": "-",
+    "materials": "Hardwearing Aluminium",
+    "category":"Exclusive Furniture",
+    "price": "-"
+    },
+    "color_palette" : {
+    "name": "2023 Color Palette",
+    "image": "IMAGE OF TRANSLUCENT GLASSSTRIPES OF A PASTELL COLOUR PALETTE",
+    "quote": ' "This collection allowed us to be more introspective about the meaning of colour in our lives." ',
+    "quoted":"Ryan Smith, chief creative of 3form",
+    "offerer":"3form",
+    "dimensions": "-",
+    "materials": "Varia, Chroma and Glass",
+    "category":"Modular Interiour Design ",
+    "price": "-"
+    },
 }
 
-@app.route("/landing")
+# Landin-page, overview and downloadable material 
+@app.route("/gallery")
 def landing():
   return render_template("01_landing.html")
 
-@app.route("/product")
-def product():
-  name="Paul"
-  return render_template("ppage.html", name=name)
-
-@app.route("/product1")
+# Exhibit 1 
+@app.route("/exhibit1")
 def product1():
   name="Paul"
   object=pieces["era300"]
@@ -42,21 +72,59 @@ def product1():
   price=object["price"],
   )
 
-@app.route("/product2")
+# Exhibit 2  
+@app.route("/exhibit2")
 def product2():
   name="Paul"
-  return render_template("ppage.html", name=name)
+  object=pieces["phantom_syntopia"]
 
-@app.route("/product3")
+  return render_template("ppage.html", 
+  name=object["name"], 
+  image=object["image"],
+  quote=object["quote"], 
+  quoted=object["quoted"],
+  offerer=object["offerer"],
+  dimensions=object["dimensions"],
+  materials=object["materials"],
+  category=object["category"],
+  price=object["price"],
+  )
+
+  # Exhibit 3  
+@app.route("/exhibit3")
 def product3():
   name="Paul"
-  return render_template("ppage.html", name=name)
+  object=pieces["white_fromme"]
 
-@app.route("/product4")
+  return render_template("ppage.html", 
+  name=object["name"], 
+  image=object["image"],
+  quote=object["quote"], 
+  quoted=object["quoted"],
+  offerer=object["offerer"],
+  dimensions=object["dimensions"],
+  materials=object["materials"],
+  category=object["category"],
+  price=object["price"],
+  )
+
+  # Exhibit 4   
+@app.route("/exhibit4")
 def product4():
   name="Paul"
-  return render_template("ppage.html", name=name)
+  object=pieces["color_palette"]
 
+  return render_template("ppage.html", 
+  name=object["name"], 
+  image=object["image"],
+  quote=object["quote"], 
+  quoted=object["quoted"],
+  offerer=object["offerer"],
+  dimensions=object["dimensions"],
+  materials=object["materials"],
+  category=object["category"],
+  price=object["price"],
+  )
 
 if __name__ == "__main__":
   app.run()
