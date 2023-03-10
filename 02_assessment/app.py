@@ -12,7 +12,8 @@ pieces = {
     "dimensions": "30x20x10 cm",
     "materials": "hard case plastic and wood",
     "category":"Spatial home Audio",
-    "price": " 399$"
+    "price": "399$",
+    "count":"1"
     },
     "phantom_syntopia" : {
     "name": "Phantom Syntopia",
@@ -23,7 +24,8 @@ pieces = {
     "dimensions": "571x214x157 cm",
     "materials": "Leather, Fabric, Steel",
     "category":"Vehicle",
-    "price": "-"
+    "price": "-",
+    "count":"2"
     },
     "white_fromme" : {
     "name": "White Fromme Collection",
@@ -34,7 +36,8 @@ pieces = {
     "dimensions": "-",
     "materials": "Hardwearing Aluminium",
     "category":"Exclusive Furniture",
-    "price": "-"
+    "price": "-",
+    "count":"3"
     },
     "color_palette" : {
     "name": "2023 Color Palette",
@@ -45,12 +48,13 @@ pieces = {
     "dimensions": "-",
     "materials": "Varia, Chroma and Glass",
     "category":"Modular Interiour Design ",
-    "price": "-"
+    "price": "-",
+    "count":"4"
     },
 }
 
 # Landin-page, overview and downloadable material 
-@app.route("/gallery")
+@app.route("/gallery", methods=["GET", "WRITE"])
 def landing():
   pieces = {
   "era300" : {
@@ -62,7 +66,8 @@ def landing():
     "dimensions": "30x20x10 cm",
     "materials": "hard case plastic and wood",
     "category":"Spatial home Audio",
-    "price": " 399$"
+    "price": "399$",
+    "count":"1"
     },
     "phantom_syntopia" : {
     "name": "Phantom Syntopia",
@@ -73,7 +78,8 @@ def landing():
     "dimensions": "571x214x157 cm",
     "materials": "Leather, Fabric, Steel",
     "category":"Vehicle",
-    "price": "-"
+    "price": "-",
+    "count":"2"
     },
     "white_fromme" : {
     "name": "White Fromme Collection",
@@ -84,7 +90,8 @@ def landing():
     "dimensions": "-",
     "materials": "Hardwearing Aluminium",
     "category":"Exclusive Furniture",
-    "price": "-"
+    "price": "-",
+    "count":"3"
     },
     "color_palette" : {
     "name": "2023 Color Palette",
@@ -95,14 +102,14 @@ def landing():
     "dimensions": "-",
     "materials": "Varia, Chroma and Glass",
     "category":"Modular Interiour Design ",
-    "price": "-"
+    "price": "-",
+    "count":"4"
     },
 }
-
   return render_template("01_landing.html", pieces=pieces)
 
 # Exhibit 1 
-@app.route("/exhibit1", methods=["GET", "WRITE"])
+@app.route("/exhibit1")
 def product1():
   name="Paul"
   object=pieces["era300"]
@@ -117,6 +124,7 @@ def product1():
   materials=object["materials"],
   category=object["category"],
   price=object["price"],
+  count=object["count"]
   )
 
 # Exhibit 2  
@@ -177,6 +185,22 @@ def product4():
 @app.route("/downloads")
 def exhibition():
   return send_file("static/downloads/exhibition.txt", as_attachment=True)
+
+# slug route 
+@app.route("/<slug>")
+def display(slug):
+  slug=slug
+  return render_template("ppage.html", 
+  name="Sorry, we don't have an object called like this" , 
+  image=None,
+  quote=None, 
+  quoted=None,
+  offerer=None,
+  dimensions=None,
+  materials=None,
+  category=None,
+  price=None,
+  )
 
 if __name__ == "__main__":
   app.run()
