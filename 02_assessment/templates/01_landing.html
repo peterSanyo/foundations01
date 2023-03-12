@@ -11,14 +11,14 @@
 
 <body>
     <h1>Welcome to Glass Curtain Gallery</h1>
-    <h2>What is your Name?</h2>
+    <!-- <h2>What is your Name?</h2>
     <form method="WRITE">
         <input type="text" id="tt" placeholder="Enter Name : ">
         <input type="checkbox" checked>
       </form>
       <button onclick="my()">Submit now</button>
       <p id="demo"></p>
-      </div>
+      </div> -->
 
       <div class="menu">
         <h3>Currently Showing</h3> 
@@ -26,7 +26,7 @@
             <p><a href={{'/exhibit'+piece["count"]}}>{{piece["name"]}} by {{piece["offerer"]}}</a></p> 
         {% endfor %} 
       </div>
-      <a href="/downloads">Download Exhibition details</a>
+      <a class="download" href="/downloads">Download Exhibition details</a>
     
 
 
