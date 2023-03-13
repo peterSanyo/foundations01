@@ -1,7 +1,16 @@
 Hand-in 2/5 , Flask Backend
 Foundations 2023, CODE University Berlin   
 by Péter Sanyó
+_______________
+Front end stack: 
+- HTML 
+- CSS
+- JavaScript (to come) 
 
+Back end stack:
+- Language: Python 
+- Server-side web framework and servers: Flask,  Jinja2
+__________________
 The idea of this website is to grow into an Auction Gallery where 4 objects get to be curated over a time-period of a week. 
 
 Therefore the current structure contains one landing page and 4 product pages which will be further worked on. 
